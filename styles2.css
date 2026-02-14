@@ -1,0 +1,127 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+}
+
+/* Romantic animated background */
+body{
+    text-align:center;
+    color:white;
+    overflow-x:hidden;
+
+    background: linear-gradient(-45deg,
+        #ff758c,
+        #ff7eb3,
+        #ff4e78,
+        #ff9a9e
+    );
+    background-size:400% 400%;
+    animation:gradientBG 12s ease infinite;
+}
+
+/* Background animation */
+@keyframes gradientBG {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Header */
+header{
+    padding:30px 15px;
+}
+
+h1{
+    font-size:2.4em;
+}
+
+/* Slideshow */
+.slideshow{
+    max-width:90%;
+    margin:20px auto;
+}
+
+.slide{
+    display:none;
+    position:relative;
+}
+
+.slide img{
+    width:100%;
+    max-height:80vh;
+    object-fit:contain;
+    background:black;
+    border-radius:15px;
+    border:3px solid white;
+}
+
+/* Caption */
+.caption{
+    position:absolute;
+    bottom:15px;
+    left:50%;
+    transform:translateX(-50%);
+    background:rgba(0,0,0,0.6);
+    padding:10px 15px;
+    border-radius:10px;
+    font-size:18px;
+}
+
+/* Love letter box */
+.letter-box{
+    max-width:90%;
+    margin:30px auto;
+    padding:20px;
+    background:rgba(255,255,255,0.2);
+    border-radius:15px;
+    backdrop-filter:blur(5px);
+}
+
+#loveLetter{
+    font-size:18px;
+    line-height:1.6;
+}
+
+/* Buttons */
+.buttons{
+    margin:15px;
+}
+
+button{
+    padding:12px 20px;
+    font-size:16px;
+    border:none;
+    border-radius:10px;
+    background:white;
+    color:#ff4e78;
+    cursor:pointer;
+    margin:5px;
+}
+
+button:hover{
+    background:pink;
+}
+
+/* Floating hearts */
+.heart{
+    position:fixed;
+    bottom:-10px;
+    animation:floatUp linear infinite;
+}
+
+@keyframes floatUp{
+    0%{transform:translateY(0);opacity:1;}
+    100%{transform:translateY(-100vh);opacity:0;}
+}
+
+footer{
+    padding:20px;
+}
+
+@media(max-width:600px){
+    h1{font-size:1.8em;}
+    .caption{font-size:14px;}
+    #loveLetter{font-size:16px;}
+}
